@@ -1,0 +1,23 @@
+base_url='https://www.google.com/'
+search_box="//input[@class='hero-search']"
+dropdownFirstEl="//*[@class='typeahead dropdown-menu']/li[1]/a"
+prices="//*[@data-qa='drug_price' and contains(., '$')]"
+coupons = "//*[@data-qa='coupon_button']"
+stores = "//*[@data-qa='store_name']"
+regex = r'\$(?:\d{1,3}\,|)\d{1,3}\.\d{2}'
+regex_stores = r'(?<=:\n)(.*?)(?=\n.)'
+coupon_price = "//*[@class='value pull-left']"
+coupon_store = "//*[@class='explanation']"
+getfreecoupon = "//a[contains(text(), 'Get Free Coupon')]"
+proceedtodiscount="//a[contains(text(), 'Proceed to Discount')]"
+proceedtodiscountid="uat-attestation-accept-button"
+option_generic="//*[@id='uat-dropdown-brand']/i"
+option_capsule="//*[@id='uat-dropdown-form']/i"
+option_dosage="//*[@id='uat-dropdown-dosage']/i"
+option_quantity="//*[@id='uat-dropdown-quantity']/i"
+option_elememnts="(//*[@role='listbox']/li)"
+discontinued_drug="(//*[@data-qa='discontinued_drug_ctn']//div)[2]"
+prices_coupons_page="//*[@data-qa='config_description_txt']"
+but_okgotit="//button[contains(text(), 'OK, Got It')]"
+option_quantity_cus="//*[@data-qa='qty_input']"
+option_quantity_cus_set="//*[@data-qa='set_qty_button_enabled']"
