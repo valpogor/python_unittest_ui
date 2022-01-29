@@ -26,7 +26,7 @@ jobs:
         python -m pip install --upgrade pip
     - name: Test with pytest
       env:
-        EMAIL: ${{ secrets.EMAIL_ADDRESS }}
-        PWD: ${{ secrets.PASSWORD }}
+        EMAIL: ${{ secrets.EMAIL }}
+        PASSWORD: ${{ secrets.PASSWORD }}
       run: |
         python utils/firstNumber.py
