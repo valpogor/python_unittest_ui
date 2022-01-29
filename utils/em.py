@@ -6,10 +6,13 @@ from email.mime.text import MIMEText
 import os
 
 def sendEmail(m):
-    me = os.environ['EMAIL']
-    my_password = os.environ['PWD']
-    # me = '${{ secrets.EMAIL_ADDRESS }}'
-    # my_password = r'${{ secrets.PASSWORD }}'
+    me1 = os.environ['EMAIL']
+    my_password1 = os.environ['PWD']
+    me = '${{ secrets.EMAIL }}'
+    my_password = r'${{ secrets.PASSWORD }}'
+    print(me, me1)
+    print(my_password, my_password1)
+    # secret = {{ secret.GIT_TOKEN }}.
     msg = MIMEMultipart('alternative')
     msg['Subject'] = "Lucky numbers"
     msg['From'] = me
