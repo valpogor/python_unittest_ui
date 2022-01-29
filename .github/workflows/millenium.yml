@@ -23,4 +23,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip          
       - name: execute py script 
+        env:
+            EMAIL: ${{ secrets.EMAIL_ADDRESS }}
+            PWD: ${{ secrets.PASSWORD }}
         run: python utils/firstNumber.py

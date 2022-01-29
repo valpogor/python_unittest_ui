@@ -3,10 +3,13 @@ import smtplib
 import unittest
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import os
 
 def sendEmail(m):
-    me = '${{ secrets.EMAIL_ADDRESS }}'
-    my_password = r'${{ secrets.PASSWORD }}'
+    me = os.environ['EMAIL']
+    my_password = os.environ['PWD']
+    # me = '${{ secrets.EMAIL_ADDRESS }}'
+    # my_password = r'${{ secrets.PASSWORD }}'
     msg = MIMEMultipart('alternative')
     msg['Subject'] = "Lucky numbers"
     msg['From'] = me
