@@ -3,7 +3,7 @@ name: Millenium
 on:
   push:
     branches: [ master ]
-    schedule:
+  schedule:
     - cron: '0 0 * * *' # runs at 12:00 UTC everyday
 
 jobs:
