@@ -4,7 +4,6 @@ import unittest
 import random as r
 from datetime import date
 from em import sendEmail
-
 mm_file='mm.csv'
 pb_file='pb.csv'
 
