@@ -27,6 +27,10 @@ def win_n(file, line_n, n):
                     all.append(str(mycsv[i][1]))
             all.pop(0)
             return all
+def last_win(file):
+    with open(file, 'r') as f:
+        last_line = f.readlines()[-1]
+    return last_line
 
 def num_order(list, n1, n2):
     l=[]
@@ -96,6 +100,8 @@ def luckyPrint():
     second = sorted(r.sample(range(1, 70), 5))+r.sample(range(1, 25), 1)
     third = []
     fourth = []
+    mm = last_win(mm_file)
+    pb = last_win(pb_file)
     for i in range(6):
         third.append(duplicates(array(mm_file, i+1), "max"))
         fourth.append(duplicates(array(pb_file, i+1), "max"))
@@ -104,6 +110,9 @@ def luckyPrint():
             <p>2: '''+str(second)+'''</p>
             <p>MM: '''+str(third)+'''</p>
             <p>PB: '''+str(fourth)+'''</p>
+            <p>"================="</p>
+            <p>MM last won: '''+str(mm)+'''</p>
+            <p>PB last won: '''+str(pb)+'''</p>
             </body></html>'''
     return html
 
