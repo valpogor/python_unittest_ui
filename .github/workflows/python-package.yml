@@ -29,4 +29,4 @@ jobs:
         EMAIL: ${{ secrets.EMAIL }}
         PASSWORD: ${{ secrets.PASSWORD }}
       run: |
-        python utils/firstNumber.py
+        python utils/sendEmail.py
