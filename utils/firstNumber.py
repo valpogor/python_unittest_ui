@@ -1,11 +1,9 @@
 import csv
 from getFile import getFiles
-from gpt_number import mm_ai
-from chatGPT_pb import pb_ai
 import unittest
 import random as r
 from datetime import date
-from em import sendEmail
+from gpt_number import ai
 
 mm_file = 'mm.csv'
 pb_file = 'pb.csv'
@@ -129,8 +127,8 @@ def luckyPrint():
             <p>MM: ''' + str(third) + '''</p>
             <p>PB: ''' + str(fourth) + '''</p>
             <p>"================="</p>
-            # <p>MM_ai: ''' + mm_ai() + '''</p>
-            # <p>PB_ai: ''' + pb_ai() + '''</p>
+            <p>MM_ai: ''' + str(ai('mm.csv')) + '''</p>
+            <p>PB_ai: ''' + str(ai('pb.csv')) + '''</p>
             <p>"================="</p>
             <p>MM last won is: 
             </p>''' + str(mm) + '''</p>
