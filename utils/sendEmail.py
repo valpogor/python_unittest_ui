@@ -1,4 +1,5 @@
 from gpt_number import ai
+from gpt_number_unProbable import ai_n
 from firstNumber import first_list, last_win, duplicates, array
 from getFile import getFiles
 import unittest
@@ -32,6 +33,9 @@ def luckyPrint():
             <p>"=========GPT========"</p>
             <p>MM_ai: ''' + str(ai('mm.csv')) + '''</p>
             <p>PB_ai: ''' + str(ai('pb.csv')) + '''</p>
+             <p>"=========GPT====noProb===="</p>
+            <p>MM_ai: ''' + str(ai_n('mm.csv')) + '''</p>
+            <p>PB_ai: ''' + str(ai_n('pb.csv')) + '''</p>
             <p>"=======WON=========="</p>
             <p>MM last won is: 
             </p>''' + str(mm) + '''</p>
