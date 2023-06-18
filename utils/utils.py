@@ -3,7 +3,7 @@ import csv
 from datetime import datetime
 import datetime
 import random
-from dateutil.parser import parse
+# from dateutil.parser import parse
 
 myfilepath='mm.csv'
 myfilepathPB='pb.csv'
@@ -76,32 +76,32 @@ def checkIfPresent(n, user):
 #         text = mycsv[line_number][n]+" "+mycsv[line_number][n+1]
 #     return text
 
-def filePars(file, year):
-    with open(file, 'r') as f:
-        mycsv = csv.reader(f)
-        mycsv = list(mycsv)
-        all=[]
-        years=[]
-        new=[]
-        for i in range(len(mycsv)):
-            all.append(mycsv[i][1])
-            years.append(mycsv[i][0])
-        # else:
-        # for i in range(len(mycsv)):
-        #     all.append(mycsv[i][1] + " " + mycsv[i][2])
-        #     years.append(mycsv[i][0])
-        y = []
-        # for i in range(len(years)):
-        #     y.append(convertDate(years[i]))
-        for i in range(len(mycsv)):
-            new.append([convertDate(mycsv[i][0]),mycsv[i][1]])
-        if str(year)!="":
-            for i in range(len(new)):
-                if str(year) in new[i][0]:
-                    y.append(new[i][1])
-            return y
-        else:
-            return all
+# def filePars(file, year):
+#     with open(file, 'r') as f:
+#         mycsv = csv.reader(f)
+#         mycsv = list(mycsv)
+#         all=[]
+#         years=[]
+#         new=[]
+#         for i in range(len(mycsv)):
+#             all.append(mycsv[i][1])
+#             years.append(mycsv[i][0])
+#         # else:
+#         # for i in range(len(mycsv)):
+#         #     all.append(mycsv[i][1] + " " + mycsv[i][2])
+#         #     years.append(mycsv[i][0])
+#         y = []
+#         # for i in range(len(years)):
+#         #     y.append(convertDate(years[i]))
+#         for i in range(len(mycsv)):
+#             new.append([convertDate(mycsv[i][0]),mycsv[i][1]])
+#         if str(year)!="":
+#             for i in range(len(new)):
+#                 if str(year) in new[i][0]:
+#                     y.append(new[i][1])
+#             return y
+#         else:
+#             return all
 
 def fileParsYear(file):
     with open(file, 'r') as f:
@@ -454,9 +454,9 @@ def printWinsList(list, freq):
         # print(list, "not offen: ", results)
     return results
 
-def convertDate(d):
-    dt = parse(d)
-    return dt.strftime('%m/%d/%Y')
+# def convertDate(d):
+#     dt = parse(d)
+#     return dt.strftime('%m/%d/%Y')
 
 def overwriteFile(file, first, second):
     x = [first, second]
@@ -471,3 +471,5 @@ def extract_numbers(input_str):
     tokens = input_str.split(',')
     output_str = ','.join(tokens[1:6])
     return output_str
+
+
