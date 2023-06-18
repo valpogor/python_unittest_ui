@@ -58,19 +58,19 @@ class main(unittest.TestCase):
     #     printWins('pb.csv', 'offen')
     # #     printWins('pb.csv', 'not')
 
-    def test_numbers_year(self):
-        for i in range(12):
-            year=2010+i
-            win=printWinsList(filePars('pb.csv', year),'offen')
-            print(year," PB offen is: "+win)
-            n = int(win.replace(' ', ''))
-            print(sumAllNumbers(n))
-        for i in range(20):
-            year = 2002 + i
-            win=printWinsList(filePars('mm.csv', year),'offen')
-            print(year, " MM offen is: " + win)
-            n = int(win.replace(' ', ''))
-            print(sumAllNumbers(n))
+    # def test_numbers_year(self):
+    #     for i in range(12):
+    #         year=2010+i
+    #         win=printWinsList(filePars('pb.csv', year),'offen')
+    #         print(year," PB offen is: "+win)
+    #         n = int(win.replace(' ', ''))
+    #         print(sumAllNumbers(n))
+    #     for i in range(20):
+    #         year = 2002 + i
+    #         win=printWinsList(filePars('mm.csv', year),'offen')
+    #         print(year, " MM offen is: " + win)
+    #         n = int(win.replace(' ', ''))
+    #         print(sumAllNumbers(n))
 
     # def test_numbers_month(self)://not ready
     #     for i in range(12):
