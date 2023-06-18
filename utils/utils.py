@@ -2,8 +2,7 @@ from decimal import Decimal, getcontext
 import csv
 from datetime import datetime
 import datetime
-import random, math
-from collections import Counter
+import random
 from dateutil.parser import parse
 
 myfilepath='mm.csv'
@@ -472,5 +471,3 @@ def extract_numbers(input_str):
     tokens = input_str.split(',')
     output_str = ','.join(tokens[1:6])
     return output_str
-
-
