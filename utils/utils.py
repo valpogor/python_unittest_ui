@@ -468,3 +468,9 @@ def overwriteFile(file, first, second):
 def sum_digits(digit):
     return sum(int(x) for x in digit if x.isdigit())
 
+def extract_numbers(input_str):
+    tokens = input_str.split(',')
+    output_str = ','.join(tokens[1:6])
+    return output_str
+
+
