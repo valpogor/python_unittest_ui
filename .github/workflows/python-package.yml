@@ -30,3 +30,4 @@ jobs:
         PASSWORD: ${{ secrets.PASSWORD }}
       run: |
         python utils/sendEmail.py
+        python utils/sendEmailLastNumber.py
