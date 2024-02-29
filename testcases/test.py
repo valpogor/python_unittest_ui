@@ -4,8 +4,6 @@ from helpers import utility, webdriver
 from pageobjects import strings
 
 class TestCoupons(unittest.TestCase):
-
-
     def setUp(self):
         webdriver.driver(self, "FIREFOX")
 
