@@ -7,8 +7,7 @@ on:
     - cron: '0 0 * * *' #runs at 12:00 UTC everyday
 
 jobs:
-  build:
-
+  workflow-command-job:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
